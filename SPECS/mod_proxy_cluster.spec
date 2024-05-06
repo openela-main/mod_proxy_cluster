@@ -2,18 +2,18 @@
 %define _jarsign_opts --nocopy
 
 # Update commitid and serial when new sources and release info is available
-%global commitid eb56c23d62fe5dec0b4e3ecfcdb7a44f79abec5d
+%global commitid 45265ef9c1f53c71af5241f9deae19fd839263c8
 %global serial 1
 
 Name:       mod_proxy_cluster
 Summary: 	JBoss mod_proxy_cluster for Apache httpd
-Version: 	1.3.18
+Version: 	1.3.20
 Release: 	%{serial}%{?dist}
 Epoch:		0
 License: 	LGPLv3
 Group: 		Applications/System
 URL:		https://github.com/modcluster/mod_cluster
-# You can get the tarball from https://github.com/modcluster/mod_cluster/archive/eb56c23d62fe5dec0b4e3ecfcdb7a44f79abec5d.tar.gz
+# You can get the tarball from https://github.com/modcluster/mod_cluster/archive/45265ef9c1f53c71af5241f9deae19fd839263c8.tar.gz
 Source0:        mod_cluster-%{commitid}.tar.gz
 Source1:        %{name}.conf.sample
 Source2:        %{name}.te
@@ -114,6 +114,10 @@ fi
 
 
 %changelog
+* Thu Feb 29 2024 Sokratis Zappis <szappis@redhat.com> - 1.3.20-1
+- Rebase mod_cluster to upstream 1.3.20.Final tag
+- Related: RHEL-27497 - Rebase to upstream 1.3.20.Final release
+
 * Fri Jan 20 2023 Sokratis Zappis <szappis@redhat.com> - 1.3.18-1
 - Rebase mod_cluster to upstream 1.3.18.Final tag
 - Related: rhbz#2158845
