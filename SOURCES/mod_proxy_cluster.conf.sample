@@ -10,11 +10,11 @@ MemManagerFile /var/cache/httpd/mod_proxy_cluster
   Listen 6666
   <VirtualHost *:6666>
     DirectoryIndex disabled
-    <Directory />
+    <Location />
       Require ip 127.0.0.1
-    </Directory>
+    </Location>
     ServerAdvertise on
-    EnableMCPMReceive
+    EnableMCMPReceive
     <Location /mod_cluster_manager>
       SetHandler mod_cluster-manager
       Require ip 127.0.0.1
