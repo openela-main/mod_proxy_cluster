@@ -14,7 +14,7 @@ MemManagerFile /var/cache/httpd/mod_proxy_cluster
       Require ip 127.0.0.1
     </Location>
     ServerAdvertise on
-    EnableMCMPReceive
+    EnableMCPMReceive
     <Location /mod_cluster_manager>
       SetHandler mod_cluster-manager
       Require ip 127.0.0.1
