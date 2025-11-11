@@ -3,12 +3,12 @@
 
 # Update commitid and serial when new sources and release info is available
 %global commitid 42b64bbafb597df26b7c7441e922f295b238247c
-%global serial 1
+%global serial 2
 
 Name:       mod_proxy_cluster
 Summary: 	JBoss mod_proxy_cluster for Apache httpd
 Version: 	1.3.22
-Release: 	%{serial}%{?dist}.1
+Release: 	%{serial}%{?dist}
 Epoch:		0
 License: 	LGPLv3
 Group: 		Applications/System
@@ -114,8 +114,11 @@ fi
 
 
 %changelog
-* Thu Feb 27 2025 Vladimír Chlup <vchlup@redhat.com> - 1.3.22-1.el9_6.1
-- Resolves: RHEL-81070 Rebase mod_proxy_cluster to upstream 1.3.22.Final release
+* Mon Mar 3 2025 Vladimír Chlup <vchlup@redhat.com> - 1.3.22-2
+- Resolves: RHEL-80864: Bump serial to fix upgrade problems
+
+* Wed Feb 26 2025 Vladimír Chlup <vchlup@redhat.com> - 1.3.22-1
+- Resolves: RHEL-80864 Rebase mod_proxy_cluster to upstream 1.3.22.Final release
 
 * Thu Feb 29 2024 Sokratis Zappis <szappis@redhat.com> - 1.3.20-1
 - Rebase mod_cluster to upstream 1.3.20.Final tag
